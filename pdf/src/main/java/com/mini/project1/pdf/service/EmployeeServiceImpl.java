@@ -218,8 +218,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 			workSheet.setDefaultColumnWidth(30);
 			
 			HSSFCellStyle headerCellStyle = workbook.createCellStyle();
-			headerCellStyle.setFillBackgroundColor(HSSFColor.BLUE.index);
+			
+			headerCellStyle.setFillBackgroundColor(HSSFColor.WHITE.index);
+			//headerCellStyle.setFillBackgroundColor(HSSFColor.BLUE.index);
+			
 			headerCellStyle.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+			
+			//headerCellStyle.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
 			
 			HSSFRow headerRow = workSheet.createRow(0);
 			
