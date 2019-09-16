@@ -48,6 +48,28 @@ public class pdfController {
 			
 		}	
 	}
+	
+	
+	@GetMapping(value="/createExcel")
+	public void createExcel(HttpServletRequest request, HttpServletResponse response) {
+		
+		List<Employee> employees = employeeService.getAllEmployees();
+		boolean isFlag = employeeService.createExcel(employees, context, request, response);
+		
+		if(isFlag) {
+			
+			String fullPath = request.getServletContext().getRealPath("/resources/reports/"+"employees"+".xls");
+			filedownload(fullPath,response, "employees.xls");
+			
+			
+		}
+		
+		
+	}
+	
+	
+	
+	
 
 	
 	

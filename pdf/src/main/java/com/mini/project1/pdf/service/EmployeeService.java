@@ -15,4 +15,7 @@ public interface EmployeeService {
 	boolean createPdf(List<Employee> employees, ServletContext context, HttpServletRequest request,
 			HttpServletResponse response);
 
+	boolean createExcel(List<Employee> employees, ServletContext context, HttpServletRequest request,
+			HttpServletResponse response);
+
 }
